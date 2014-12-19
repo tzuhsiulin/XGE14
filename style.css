@@ -1,0 +1,52 @@
+#body {
+	margin: 0;
+}
+.card-container {
+	/* 定義 child 3D 位置距離  */
+	-webkit-perspective: 300px;
+	-moz-perspective: 300px;
+	perspective: 300px;
+	float: left;
+}
+#title {
+	background-color: #36b39b;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front p {
+	font-size: 30px;
+	font-weight: bold;
+}
+.card {
+	margin: 5px;
+	text-align: center;
+	color: #fff;
+	positon: relative;	
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+.transition-card {
+	/* 設定動畫過場設定  */
+	transition: all 0.6s ease;
+}
+.transition-front, .transition-back {
+	background-color: #288fe6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* Hide the backside of a rotated */
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.transition-card:hover, .random-anim {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.transition-back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
