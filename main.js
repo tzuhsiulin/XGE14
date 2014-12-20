@@ -26,7 +26,7 @@ function setCards() {
 		if (i == 7) {
 			item = new Card();
 			if (isFirstLaunch) {
-				$("#body").append(item.getHeader());	
+				$("#body table td:eq(" + i + ")").append(item.getHeader());	
 			}
 			continue;
 		}
@@ -39,7 +39,7 @@ function setCards() {
 
 		if (isFirstLaunch) {
 			$(item.getItem()).bind('click', clickCardCallback);
-			$("#body").append(item.getItem());	
+			$("#body table td:eq(" + i + ")").append(item.getItem());	
 		}
 		
 		$(item.getItem()).find('.front p').text(index >= 7 ? i : i+1);
