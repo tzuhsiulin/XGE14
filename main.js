@@ -73,7 +73,7 @@ function startRandomAnim() {
 		cardDOM.addClass('random-anim');
 		setTimeout(function() {
 			cardDOM.removeClass('random-anim')
-		}, 400);
+		}, 600);
 	}, 100);
 }
 

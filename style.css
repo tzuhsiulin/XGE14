@@ -3,9 +3,9 @@
 }
 .card-container {
 	/* 定義 child 3D 位置距離  */
-	-webkit-perspective: 300px;
-	-moz-perspective: 300px;
-	perspective: 300px;
+	-webkit-perspective: 700px;
+	-moz-perspective: 700px;
+	perspective: 700px;
 	float: left;
 }
 #title {
@@ -40,7 +40,12 @@
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.transition-card:hover, .random-anim {
+.random-anim {
+	-webkit-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+}
+.transition-card:hover {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 	transform: rotateY(180deg);
